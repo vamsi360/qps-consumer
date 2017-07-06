@@ -1,6 +1,7 @@
 
-** Varadhi Consumer Perf
-Make a simple single threaded consumer which can do non-blocking http POST requests to a destination server
+** QPS based Consumer
+- Make a simple single threaded consumer which can do non-blocking http POST requests to a destination server
+- Give an input qps and it should make so many requests per sec on a single thread
 
 ** Components
 - Netty

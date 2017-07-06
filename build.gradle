@@ -11,4 +11,7 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    //compile time dependencies
+    compile group: 'io.netty', name: 'netty-all', version: '4.1.12.Final'
 }
