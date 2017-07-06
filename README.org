@@ -1,0 +1,7 @@
+
+** Varadhi Consumer Perf
+Make a simple single threaded consumer which can do non-blocking http POST requests to a destination server
+
+** Components
+- Netty
+- Java8
