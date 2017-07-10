@@ -15,4 +15,8 @@ dependencies {
 
     //compile time dependencies
     compile group: 'io.netty', name: 'netty-all', version: '4.1.12.Final'
+    compile group: 'org.apache.kafka', name: 'kafka-clients', version: '0.11.0.0'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.18'
 }

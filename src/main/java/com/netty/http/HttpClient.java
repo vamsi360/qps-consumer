@@ -1,3 +1,5 @@
+package com.netty.http;
+
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -14,14 +16,13 @@ import io.netty.util.CharsetUtil;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
-import java.net.UnknownHostException;
 import java.util.Enumeration;
 import java.util.UUID;
 
 /**
  * Created by vamsi on 7/7/17.
  */
-public class MainClient {
+public class HttpClient {
 
     public static void main(String args[]) throws Exception {
 
@@ -49,7 +50,6 @@ public class MainClient {
 
             for (int i = 0; i < maxRequests; i++) {
                 Channel channel = bootstrap.connect(host, port).sync().channel();
-
                 ByteBuf payloadByteBuf = Unpooled.copiedBuffer("", CharsetUtil.UTF_8);
 
                 HttpRequest request = new DefaultFullHttpRequest(
