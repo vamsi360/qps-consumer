@@ -10,12 +10,12 @@ import java.util.Set;
 /**
  * Created by vamsi on 10/7/17.
  */
-public class TopicMessageGroups {
+public class MessageGroups {
 
     private final Topic topic;
     private final Set<MessageGroup> messageGroups = new HashSet<>();
 
-    public TopicMessageGroups(Topic topic) {
+    public MessageGroups(Topic topic) {
         this.topic = topic;
     }
 

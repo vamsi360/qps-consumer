@@ -13,14 +13,12 @@ import java.util.Properties;
  * Created by vamsi on 10/7/17.
  */
 public class KafkaConsumerClient {
-    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumerClient.class);
-
     public static final String testTopic_1 = "test_topic_1";
     public static final int partitionsForTestTopic = 3;
     public static final int pollTimeMs = 100;
-
     public static final String kafkaBrokerHost = "localhost";
     public static final int kafkaBrokerPort = 9092;
+    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumerClient.class);
 
     public static void main(String args[]) throws InterruptedException {
         Properties properties = new Properties();
