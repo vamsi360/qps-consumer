@@ -1,14 +1,14 @@
-package com.netty.consumers;
+package com.messaging.consumers;
 
-import com.netty.domain.Message;
-import com.netty.domain.MessageGroup;
-import com.netty.domain.Topic;
+import com.messaging.domain.Message;
+import com.messaging.domain.MessageGroup;
+import com.messaging.domain.Topic;
 import lombok.Getter;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 /**
  * Created by vamsi on 10/7/17.
@@ -27,8 +27,6 @@ public class MessageGroupsTable {
     public void addMessages(Topic topic, List<Message> messages) {
         messages.forEach(message -> {
             String groupId = message.getGroupId();
-
-            Optional<MessageGroup> oMessageGroup = Optional.ofNullable(messageGroupsMap.get(groupId));
 
             MessageGroup messageGroup;
             if (!messageGroupsMap.containsKey(groupId)) {
@@ -50,6 +48,16 @@ public class MessageGroupsTable {
 
             messageGroups.addMessageGroup(messageGroup);
         });
+    }
+
+    public List<Message> getMessages(Topic topic, String groupId) {
+        List<Message> messages;
+        if (messageGroupsMap.containsKey(groupId)) {
+            messages = messageGroupsMap.get(groupId).getMessages();
+        } else {
+            messages = new ArrayList<>();
+        }
+        return messages;
     }
 
     public MessageGroups getMessageGroups(Topic topic) {

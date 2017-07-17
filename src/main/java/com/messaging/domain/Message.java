@@ -1,4 +1,4 @@
-package com.netty.domain;
+package com.messaging.domain;
 
 import lombok.Getter;
 
@@ -8,8 +8,9 @@ import lombok.Getter;
 @Getter
 public class Message {
 
+    private Integer seqNo;
     private String messageId;
     private String groupId;
-    private String payload;
+    private byte[] payload;
 
 }

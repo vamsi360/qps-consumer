@@ -1,4 +1,4 @@
-package com.netty.http;
+package com.messaging.http;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;

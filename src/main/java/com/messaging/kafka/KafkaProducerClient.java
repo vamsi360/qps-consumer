@@ -1,4 +1,4 @@
-package com.netty.kafka;
+package com.messaging.kafka;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;

@@ -1,4 +1,4 @@
-package com.netty.kafka;
+package com.messaging.kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;

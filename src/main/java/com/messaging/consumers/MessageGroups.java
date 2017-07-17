@@ -1,7 +1,7 @@
-package com.netty.consumers;
+package com.messaging.consumers;
 
-import com.netty.domain.MessageGroup;
-import com.netty.domain.Topic;
+import com.messaging.domain.MessageGroup;
+import com.messaging.domain.Topic;
 
 import java.util.HashSet;
 import java.util.List;

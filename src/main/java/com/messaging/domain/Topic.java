@@ -1,4 +1,4 @@
-package com.netty.domain;
+package com.messaging.domain;
 
 import lombok.Getter;
 

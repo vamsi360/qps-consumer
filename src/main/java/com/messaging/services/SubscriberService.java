@@ -1,8 +1,7 @@
-package com.netty.services;
+package com.messaging.services;
 
-import com.netty.consumers.MessageGroupsTable;
-import com.netty.domain.MessageGroup;
-import com.netty.domain.Topic;
+import com.messaging.domain.MessageGroup;
+import com.messaging.domain.Topic;
 
 import java.util.ArrayList;
 import java.util.List;
