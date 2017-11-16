@@ -30,7 +30,7 @@ public class Subscriber {
     public List<MessageGroup> getUnconsumedMessageGroups(SubscriberGroup.QType qType, int count) {
         return groups.stream()
                 .filter(SubscriberGroup::isFullyConsumed)
-                .map(SubscriberGroup::getMessageGroup)
+                .map(subscriberGroup -> subscriberGroup.getMessageGroup())
                 .limit(count)
                 .collect(Collectors.toList());
     }
