@@ -33,8 +33,9 @@ public class VHttpReqHandler extends ChannelInboundHandlerAdapter {
                 response.headers().add(CONNECTION, KEEP_ALIVE);
                 ctx.write(response);
             }
-        } else {
-            System.out.println("== Non-http Request ==");
+        } else if (msg instanceof HttpContent) {
+            System.out.println("== Http Content ==");
+            System.out.println(msg);
         }
     }
 
